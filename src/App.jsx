@@ -5,6 +5,7 @@ import { Suspense, useState } from "react";
 import { ToastContainer } from 'react-toastify';
 import ResolveTask from "./components/ResolveTask/ResolveTask";
 import ShowCounts from "./components/ShowCounts/ShowCounts";
+import Footer from "./components/Footer/Footer";
 
 const fetchProblemsFunc = async () => {
   const res = await fetch('./problems.json');
@@ -25,7 +26,7 @@ function App() {
       <div className="bg-gray-300 py-20 px-4">
         <ShowCounts inProgressProblems = {inProgressProblems}
         resolveProblems = {resolveProblems}></ShowCounts>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto mt-10">
           <Suspense fallback={<span className="loading loading-ring loading-xl"></span>}>
 
             <CustomerTickets problemsPromise={problemsPromise}
@@ -48,6 +49,7 @@ function App() {
           <ToastContainer />
         </div>
       </div>
+      <Footer></Footer>
     </>
   )
 }
