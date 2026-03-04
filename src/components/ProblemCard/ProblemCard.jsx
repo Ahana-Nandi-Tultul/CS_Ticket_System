@@ -1,11 +1,16 @@
 import React from 'react';
 import { GoDotFill } from "react-icons/go";
 import { FaRegCalendar } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
-const ProblemCard = ({ problem }) => {
+const ProblemCard = ({ problem, inProgressProblems, setInProgressProblems }) => {
     const { id, title, description, status, priority, customer_name, objection_date } = problem;
+    const handleInProgress = (problem) => {
+        setInProgressProblems([...inProgressProblems, problem]);
+        toast("Task is In Progress")
+    }
     return (
-        <div className="card card-border bg-base-100">
+        <div className="card card-border bg-base-100" onClick={() => handleInProgress(problem)}>
             <div className="card-body">
                 <div className="flex justify-between items-center">
                     <h2 className="card-title">{title}</h2>
