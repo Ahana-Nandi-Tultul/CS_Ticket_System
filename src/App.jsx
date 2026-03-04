@@ -3,6 +3,7 @@ import CustomerTickets from "./components/CustomerTickets/CustomerTickets";
 import TaskStatus from "./components/TaskStatus/TaskStatus";
 import { Suspense, useState } from "react";
 import { ToastContainer } from 'react-toastify';
+import ResolveTask from "./components/ResolveTask/ResolveTask";
 
 const fetchProblemsFunc = async () => {
   const res = await fetch('./problems.json');
@@ -14,7 +15,8 @@ const problemsPromise = fetchProblemsFunc();
 function App() {
 
   const [inProgressProblems, setInProgressProblems] = useState([]);
-  console.log(inProgressProblems);
+  const [resolveProblems, setresolveProblems] = useState([]);
+  console.log(inProgressProblems, resolveProblems.length);
   return (
     <>
       <Navbar></Navbar>
@@ -22,11 +24,19 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
           <Suspense fallback={<span className="loading loading-ring loading-xl"></span>}>
 
-            <CustomerTickets problemsPromise={problemsPromise} 
-            inProgressProblems = {inProgressProblems}
-            setInProgressProblems = {setInProgressProblems}></CustomerTickets>
+            <CustomerTickets problemsPromise={problemsPromise}
+              inProgressProblems={inProgressProblems}
+              setInProgressProblems={setInProgressProblems}></CustomerTickets>
           </Suspense>
-          <TaskStatus inProgressProblems = {inProgressProblems} ></TaskStatus>
+
+          <div className="flex flex-col gap-6">
+            <TaskStatus inProgressProblems={inProgressProblems}
+              setInProgressProblems={setInProgressProblems}
+              resolveProblems={resolveProblems}
+              setresolveProblems={setresolveProblems}></TaskStatus>
+
+            <ResolveTask resolveProblems={resolveProblems} ></ResolveTask>
+          </div>
           <ToastContainer />
         </div>
       </div>

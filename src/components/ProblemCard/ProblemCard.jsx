@@ -6,15 +6,21 @@ import { toast } from 'react-toastify';
 const ProblemCard = ({ problem, inProgressProblems, setInProgressProblems }) => {
     const { id, title, description, status, priority, customer_name, objection_date } = problem;
     const handleInProgress = (problem) => {
-        setInProgressProblems([...inProgressProblems, problem]);
-        toast("Task is In Progress")
+        const existProblem = inProgressProblems.find(prb => prb.id === problem.id)
+        if (existProblem) {
+            toast("Task Already In Progress")
+        }
+        else {
+            setInProgressProblems([...inProgressProblems, problem]);
+            toast("Task is In Progress")
+        }
     }
     return (
         <div className="card card-border bg-base-100" onClick={() => handleInProgress(problem)}>
             <div className="card-body">
                 <div className="flex justify-between items-center">
                     <h2 className="card-title">{title}</h2>
-                    <button className= {`btn rounded-3xl ${status ==="Open" ? " bg-[#02A53B]": "bg-[#F8F3B9]" }`}><GoDotFill className={`text-2xl ${status ==="Open" ? "text-[#0B5E0]": "text-[#FEBB0C]" }`} />{status}</button>
+                    <button className={`btn rounded-3xl ${status === "Open" ? " bg-[#02A53B]" : "bg-[#F8F3B9]"}`}><GoDotFill className={`text-2xl ${status === "Open" ? "text-[#0B5E0]" : "text-[#FEBB0C]"}`} />{status}</button>
                 </div>
                 <p>{description}</p>
                 <div className="flex justify-between items-center">
