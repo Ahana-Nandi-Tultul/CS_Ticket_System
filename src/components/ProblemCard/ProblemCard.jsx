@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GoDotFill } from "react-icons/go";
 import { FaRegCalendar } from "react-icons/fa";
 import { toast } from 'react-toastify';
 
 const ProblemCard = ({ problem, inProgressProblems, setInProgressProblems }) => {
-    const { id, title, description, status, priority, customer_name, objection_date } = problem;
+    let { id, title, description, status, priority, customer_name, objection_date } = problem;
+    const [inprogressStatus, setInProgressStatus] = useState(status)
     const handleInProgress = (problem) => {
         const existProblem = inProgressProblems.find(prb => prb.id === problem.id)
         if (existProblem) {
             toast("Task Already In Progress")
         }
         else {
+            setInProgressStatus("In Progress");
             setInProgressProblems([...inProgressProblems, problem]);
             toast("Task is In Progress")
         }
@@ -20,7 +22,7 @@ const ProblemCard = ({ problem, inProgressProblems, setInProgressProblems }) => 
             <div className="card-body">
                 <div className="flex justify-between items-center">
                     <h2 className="card-title">{title}</h2>
-                    <button className={`btn rounded-3xl ${status === "Open" ? " bg-[#02A53B]" : "bg-[#F8F3B9]"}`}><GoDotFill className={`text-2xl ${status === "Open" ? "text-[#0B5E0]" : "text-[#FEBB0C]"}`} />{status}</button>
+                    <button className={`btn rounded-3xl ${inprogressStatus === "Open" ? " bg-[#02A53B]" : "bg-[#F8F3B9]"}`}><GoDotFill className={`text-2xl ${inprogressStatus === "Open" ? "text-[#0B5E0]" : "text-[#FEBB0C]"}`} />{inprogressStatus}</button>
                 </div>
                 <p>{description}</p>
                 <div className="flex justify-between items-center">

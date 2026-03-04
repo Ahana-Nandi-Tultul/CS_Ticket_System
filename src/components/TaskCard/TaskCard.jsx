@@ -1,12 +1,16 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const TaskCard = ({problem, inProgressProblems, setInProgressProblems, resolveProblems, setresolveProblems}) => {
+const TaskCard = ({problem, inProgressProblems, setInProgressProblems, resolveProblems, setresolveProblems
+    ,allProblems, setAllProblems
+}) => {
     const handleCompleteTask = (p) => {
-        const remaining = inProgressProblems.filter(prb => prb.id != p.id);
+        const remaining = inProgressProblems.filter(prb => prb.id !== p.id);
         setInProgressProblems([]);
         setInProgressProblems([...remaining]);
         setresolveProblems([...resolveProblems, p]);
+        const remainingproblems = allProblems.filter(prb => prb.id !== p.id);
+        setAllProblems([...remainingproblems]);
         toast("Task Resolved")
     }
     return (

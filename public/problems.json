@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Payment Not Processed",
     "description": "Customer completed payment but did not receive confirmation.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "High",
     "customer_name": "Nusrat Jahan",
     "objection_date": "2026-03-02"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Dashboard Loading Slow",
     "description": "Customer reports that dashboard takes too long to load.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Medium",
     "customer_name": "Sadia Islam",
     "objection_date": "2026-03-03"
@@ -48,7 +48,7 @@
     "id": 6,
     "title": "File Upload Failed",
     "description": "Customer unable to upload required documents.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "High",
     "customer_name": "Farzana Akter",
     "objection_date": "2026-02-27"
@@ -66,7 +66,7 @@
     "id": 8,
     "title": "Notification Not Working",
     "description": "Customer not receiving system notifications.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Medium",
     "customer_name": "Mehedi Hasan",
     "objection_date": "2026-03-03"
@@ -84,7 +84,7 @@
     "id": 10,
     "title": "Unable to Download Report",
     "description": "Customer cannot download generated report file.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Medium",
     "customer_name": "Kamal Uddin",
     "objection_date": "2026-03-01"
@@ -102,7 +102,7 @@
     "id": 12,
     "title": "Subscription Cancellation Problem",
     "description": "Customer unable to cancel active subscription.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Medium",
     "customer_name": "Jahid Karim",
     "objection_date": "2026-02-26"
@@ -120,7 +120,7 @@
     "id": 14,
     "title": "Search Function Not Returning Results",
     "description": "Customer search query returns empty results incorrectly.",
-    "status": "In Progress",
+    "status": "Open",
     "priority": "Medium",
     "customer_name": "Rakib Hasan",
     "objection_date": "2026-03-01"

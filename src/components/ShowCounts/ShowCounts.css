@@ -1,0 +1,21 @@
+.hero-section1 {
+  background:
+    linear-gradient(rgba(66,42,213,0.8), rgba(66,42,213,0.8)),
+    url('./vector1.png'),
+    url('./vector1.png');
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg {
+  background:
+    linear-gradient(to right, rgba(84, 207, 104, 0.85), rgba(0, 130, 122, 0.85)),
+    url('/image1.png'),
+    url('/image2.png');
+
+  background-repeat: no-repeat;
+  background-position: center, left bottom, right top;
+  background-size: cover, 250px, 250px;
+}

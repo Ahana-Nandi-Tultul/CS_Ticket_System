@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskCard from '../TaskCard/TaskCard';
 
-const TaskStatus = ({ inProgressProblems, setInProgressProblems, resolveProblems, setresolveProblems }) => {
+const TaskStatus = ({ inProgressProblems, setInProgressProblems, resolveProblems, setresolveProblems, allProblems, setAllProblems }) => {
     return (
         <div className="md:col-span-1 ">
             <h2 className="text-2xl font-semibold">Task Status</h2>
@@ -12,7 +12,9 @@ const TaskStatus = ({ inProgressProblems, setInProgressProblems, resolveProblems
                         key= {problem.id}
                         resolveProblems = {resolveProblems}
                         setresolveProblems ={setresolveProblems}
-                         problem = {problem}></TaskCard>)
+                         problem = {problem}
+                         allProblems = {allProblems}
+                         setAllProblems ={setAllProblems}></TaskCard>)
                 }
             </div>
         </div>
