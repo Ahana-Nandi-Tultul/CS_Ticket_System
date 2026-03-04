@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login Failure",
+    "description": "Customer is unable to log into the system using correct credentials.",
+    "status": "Open",
+    "priority": "High",
+    "customer_name": "Rahim Ahmed",
+    "objection_date": "2026-03-01"
+  },
+  {
+    "id": 2,
+    "title": "Payment Not Processed",
+    "description": "Customer completed payment but did not receive confirmation.",
+    "status": "In Progress",
+    "priority": "High",
+    "customer_name": "Nusrat Jahan",
+    "objection_date": "2026-03-02"
+  },
+  {
+    "id": 3,
+    "title": "Password Reset Email Not Received",
+    "description": "Customer requested password reset but did not receive email.",
+    "status": "Open",
+    "priority": "Medium",
+    "customer_name": "Tanvir Hasan",
+    "objection_date": "2026-02-28"
+  },
+  {
+    "id": 4,
+    "title": "Dashboard Loading Slow",
+    "description": "Customer reports that dashboard takes too long to load.",
+    "status": "In Progress",
+    "priority": "Medium",
+    "customer_name": "Sadia Islam",
+    "objection_date": "2026-03-03"
+  },
+  {
+    "id": 5,
+    "title": "Profile Update Error",
+    "description": "Customer cannot update profile information.",
+    "status": "Open",
+    "priority": "Low",
+    "customer_name": "Imran Hossain",
+    "objection_date": "2026-03-01"
+  },
+  {
+    "id": 6,
+    "title": "File Upload Failed",
+    "description": "Customer unable to upload required documents.",
+    "status": "In Progress",
+    "priority": "High",
+    "customer_name": "Farzana Akter",
+    "objection_date": "2026-02-27"
+  },
+  {
+    "id": 7,
+    "title": "Incorrect Billing Amount",
+    "description": "Customer charged incorrect subscription amount.",
+    "status": "Open",
+    "priority": "High",
+    "customer_name": "Arif Chowdhury",
+    "objection_date": "2026-03-02"
+  },
+  {
+    "id": 8,
+    "title": "Notification Not Working",
+    "description": "Customer not receiving system notifications.",
+    "status": "In Progress",
+    "priority": "Medium",
+    "customer_name": "Mehedi Hasan",
+    "objection_date": "2026-03-03"
+  },
+  {
+    "id": 9,
+    "title": "Account Suspension Issue",
+    "description": "Customer account suspended without explanation.",
+    "status": "Open",
+    "priority": "High",
+    "customer_name": "Sharmin Sultana",
+    "objection_date": "2026-02-25"
+  },
+  {
+    "id": 10,
+    "title": "Unable to Download Report",
+    "description": "Customer cannot download generated report file.",
+    "status": "In Progress",
+    "priority": "Medium",
+    "customer_name": "Kamal Uddin",
+    "objection_date": "2026-03-01"
+  },
+  {
+    "id": 11,
+    "title": "Two-Factor Authentication Error",
+    "description": "Customer unable to verify OTP during login.",
+    "status": "Open",
+    "priority": "High",
+    "customer_name": "Ritu Moni",
+    "objection_date": "2026-03-02"
+  },
+  {
+    "id": 12,
+    "title": "Subscription Cancellation Problem",
+    "description": "Customer unable to cancel active subscription.",
+    "status": "In Progress",
+    "priority": "Medium",
+    "customer_name": "Jahid Karim",
+    "objection_date": "2026-02-26"
+  },
+  {
+    "id": 13,
+    "title": "Mobile View Layout Broken",
+    "description": "Customer reports UI issues on mobile device.",
+    "status": "Open",
+    "priority": "Low",
+    "customer_name": "Mim Akter",
+    "objection_date": "2026-03-03"
+  },
+  {
+    "id": 14,
+    "title": "Search Function Not Returning Results",
+    "description": "Customer search query returns empty results incorrectly.",
+    "status": "In Progress",
+    "priority": "Medium",
+    "customer_name": "Rakib Hasan",
+    "objection_date": "2026-03-01"
+  },
+  {
+    "id": 15,
+    "title": "Email Verification Link Expired",
+    "description": "Customer reports verification link expired immediately.",
+    "status": "Open",
+    "priority": "Low",
+    "customer_name": "Sabbir Rahman",
+    "objection_date": "2026-02-28"
+  }
+]
